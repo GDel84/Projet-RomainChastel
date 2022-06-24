@@ -6,10 +6,11 @@
 
 html {
     scroll-behavior: smooth;
+
 }
 
 body {
-    font-family: Indie Flower, Helvetica, sans-serif;
+    font-family: Helvetica, sans-serif;
     background: #f1f1f1;
 }
 
@@ -19,16 +20,8 @@ nav {
     position: fixed;
     z-index: 1000;
     width: 100%;
-    height: 70px;
-    background: transparent;
-    transition: background-color 0.3s ease-in-out,
-                border-bottom 0.3s ease-in-out;
-
-}
-nav.anim-nav {
-    background: #000;
-    border-bottom: 1px solid #f1f1f1;
-    color: #f1f1f1;
+    height: 90px;
+    background: black;
 }
 nav ul {
     width: 100%; 
@@ -38,15 +31,56 @@ nav ul {
     justify-content: center;
     align-items: center;
 }
-nav li {
-    margin: 0 15px;
-}
-nav a {
-    text-decoration: none;
-    font-size: 20px;
-    color: #fff;
+.effet-nav {
+    font-family: 'Raleway', Arial, sans-serif;
+    text-align: center;
     text-transform: uppercase;
-}
+    font-weight: 50;
+    letter-spacing: 1px;
+  }
+  .effet-nav * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+  }
+  .effet-nav li {
+    display: inline-block;
+    list-style: outside none none;
+    margin: 0.5em 1.5em;
+    padding: 0;
+  }
+  .effet-nav a {
+    padding: 0.4em 0;
+    color: rgba(255, 255, 255, 0.5);
+    position: relative;
+    text-decoration: none;
+    display: inline-block;
+  }
+  .effet-nav a:before {
+    position: absolute;
+    content: '';
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+    opacity: 0;
+    top: 25%;
+    bottom: 25%;
+    left: 0;
+    right: 0;
+    border-top: 3px solid #e88d0d;
+    border-bottom: 3px solid #e88d0d;
+  }
+  .effet-nav a:hover,
+  .effet-nav .current a {
+    color: #ffffff;
+  }
+  .effet-nav a:hover:before,
+  .effet-nav .current a:before {
+    opacity: 1;
+    top: 0;
+    bottom: 0;
+  }
+
 .logoFB{
     max-width: 30px;
     max-height: 30px;
@@ -79,7 +113,7 @@ nav a {
 }
 h1 {
     color: #f1f1f1;
-    font-family: Indie Flower, Roboto, Helvetica, sans-serif;
+    font-family: Helvetica, sans-serif;
     font-size: 90px;
     padding-top: 200px;
     padding-bottom: 20px;
@@ -110,7 +144,7 @@ h1 {
     border-radius: 5px;
     outline: none;
     border: none;
-    margin-top: 40px;
+    margin-top: 25%;
     border: 1px solid #f1f1f1;
     width: 150px;
     cursor: pointer;
@@ -122,10 +156,7 @@ h1 {
     background: #f1f1f1;
 }
 .b1 {
-    margin-left: 8vw;
-}
-.b2 {
-    margin-left: 400px;
+    margin-left: 80%;
 }
 
 .bloc-droit-accueil {
@@ -209,21 +240,19 @@ h1 {
     color: #000;
     text-align: center;
     font-size: 45px;
-    padding: 50px 10px 30px;
-    font-family: Indie Flower, Arial, Helvetica, sans-serif;
+    padding: 50px 350px 30px 350px;
+    font-family: Helvetica, sans-serif;
 }
-.citation{
-    margin-left: 1300px;
-    margin-bottom: 50px;
-    font-style: italic;
-    font-size: 20px;
+
+.lien-div{
+    text-decoration: none;
 }
 .section-info {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
-    margin: 0 auto;
+    padding-top: 60px;
     background: #f1f1f1;
     position: relative;
 }
@@ -231,7 +260,7 @@ h1 {
     width: 350px;
     height: auto;
     margin: 0 20px 80px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
     position: relative;
     z-index: 100;
 }
@@ -250,14 +279,7 @@ h1 {
     color: #333;
     text-align: center;
     font-size: 23px;
-    padding: 0 5px 15px;
-}
-
-.deco-infos {
-    position: absolute;
-    z-index: -1;
-    top: -70px;
-    left: -100px;
+    padding: 0 10px 15px 0;
 }
 
 @media screen and (max-width: 1400px) {
@@ -282,172 +304,6 @@ h1 {
     }
 }
 
-
-/*------------ Section Choix ------------*/
-
-#choix {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #000;
-}
-.entrainement-choix {
-    width: 30%;
-    text-align: center;
-    color: #f1f1f1;
-    margin: 50px 20px 70px;
-}
-
-.entrainement-choix h3 {
-    font-size: 50px;
-    margin-bottom: 20px;
-    font-family: Indie Flower, Arial, Helvetica, sans-serif;
-}
-.entrainement-choix p {
-    font-size: 18px;
-    width: 70%;
-    margin: 0 auto 30px;
-}
-.btn-outline-choix {
-    width: 300px;
-    padding: 15px 0;
-    font-size: 22px;
-    background: #000;
-    color: #f1f1f1;
-    border: 1px solid #f1f1f1;
-    cursor: pointer;
-}
-.btn-outline-choix:hover {
-    transition: all 0.2s ease-in-out;
-    background: #fff;
-    color: #000;
-}
-
-@media screen and (max-width: 1200px) {
-    .entrainement-choix {
-        width: 400px;
-    }
-}
-@media screen and (max-width: 775px) {
-#choix {
-    flex-direction: column;
-}
-.entrainement-choix h3 {
-    font-size: 40px;
-    margin-bottom: 20px;
-}
-.btn-outline-choix {
-    width: 250px;
-}
-.entrainement-choix{
-    width: 350px;
-    margin: 50px 0px 70px;
-}
-.entrainement-choix:nth-child(1){
-    margin: 50px 20px 0px;
-}
-}
-
-
-
-/*------------ Section Équipements ------------*/
-
-.titre-equipements {
-    text-align: center;
-    font-size: 70px;
-    color: #000;
-    padding: 50px 0;
-    text-transform: uppercase;
-    font-family: Indie Flower, Arial, Helvetica, sans-serif;
-}
-#equipement {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 100%;
-    max-width: 1300px;
-    min-width: 300px;
-    margin: 0 auto 100px;
-}
-
-.btn-modale {
-    width: 350px;
-    height: 400px;
-    border: none;
-    margin: 10px;
-    cursor: pointer;
-    overflow: hidden;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-.btn-modale:nth-child(1){
-    background-image: url(ressources/img1-equip.jpg);
-}
-.btn-modale:nth-child(2){
-    background-image: url(ressources/img2-equip.jpg);
-}
-.btn-modale:nth-child(3){
-    background-image: url(ressources/img3-equip.jpg);
-}
-.btn-modale:nth-child(4){
-    background-image: url(ressources/img4-equip.jpg);
-}
-.btn-modale:nth-child(5){
-    background-image: url(ressources/img5-equip.jpg);
-}
-.btn-modale:nth-child(6){
-    background-image: url(ressources/img6-equip.jpg);
-}
-.btn-modale:nth-child(7){
-    background-image: url(ressources/img7-equip.jpg);
-}
-.btn-modale:nth-child(8){
-    background-image: url(ressources/img8-equip.jpg);
-}
-.btn-modale:nth-child(9){
-    background-image: url(ressources/img9-equip.jpg);
-}
-.bloc-modale {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0,0,0,0.75);
-    z-index: 1000;
-    display: none;
-}
-.active-modale {
-    display: block;
-}
-.bloc-img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 800px;
-    height: 500px;
-}
-.bloc-modale img {
-    width: 100%;
-}
-.fermeture-modale {
-    position: absolute;
-    z-index: 4000;
-    top: 5%;
-    right: 5%;
-    width: 60px;
-    height: 60px;
-    font-size: 22px;
-    color: white;
-    background: red;
-    border-radius: 50%;
-    cursor: pointer;
-    border: none;
-}
-
 /* --------------- Parallax --------------- */
 
 .parallax {
@@ -455,7 +311,7 @@ h1 {
     background-attachment: fixed;
     background-position: center;
     width: 100%;
-    height: 400px;
+    height: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -471,101 +327,37 @@ h1 {
         font-size: 50px;
     }
 }
-
-
-
-/*------------ Section Tarifs ------------*/
-
-.titre-tarifs {
-    background: #f1f1f1;
-    font-size: 50px;
-    text-align: center;
-    padding: 50px 0;
-}
-#tarifs {
-    background: #f1f1f1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 70%;
-    max-width: 1300px;
-    min-width: 300px;
-    margin: 0 auto 100px;
-}
-
-.carte-tarif {
-    width: 350px;
-    height: auto;
-    background-image: repeating-linear-gradient(22.5deg, rgba(255,255,255,0.05) 0px, rgba(255,255,255,0.05) 1px,transparent 1px, transparent 31px,rgba(255,255,255,0.05) 31px, rgba(255,255,255,0.05) 32px,transparent 32px, transparent 92px),repeating-linear-gradient(112.5deg, rgba(255,255,255,0.05) 0px, rgba(255,255,255,0.05) 1px,transparent 1px, transparent 31px,rgba(255,255,255,0.05) 31px, rgba(255,255,255,0.05) 32px,transparent 32px, transparent 92px),repeating-linear-gradient(0deg, rgba(255,255,255,0.05) 0px, rgba(255,255,255,0.05) 1px,transparent 1px, transparent 31px,rgba(255,255,255,0.05) 31px, rgba(255,255,255,0.05) 32px,transparent 32px, transparent 92px),linear-gradient(90deg, hsl(279,0%,3%),hsl(279,0%,3%));
-    color: #f1f1f1;
-    margin: 20px 10px;
-    border-radius: 5px;
-}
-
-.carte-tarif h3 {
-    text-align: center;
-    font-size: 45px;
-    margin: 25px 0;
-    font-family: Indie Flower, Arial, Helvetica, sans-serif;
-    position: relative;
-}
-.prix-carte {
-    text-align: center;
-    font-size: 30px;
-    margin: 25px 0;
-}
-.prix-carte span {
-    font-size: 80px;
-    position: relative;
-}
-.prix-carte span::after {
-    content: "€";
-    display: block;
-    position: absolute;
-    top: 10px;
-    right: -20px;
-    font-size: 25px;
-}
-.infos-carte {
-    width: 170px;
-    margin: 20px auto 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    font-size: 22px;
-}
-.infos-carte img {
-    margin-right: 7px;
-    width: 20px;
-}
-
 /*------------ Section formulaire ------------*/
-
+.logo-wing{
+    float: left;
+    margin-left: 100px;
+    width: 15%;
+}
 .titre-contact {
-    border-top: 1px dashed #000;
+    border-top: 3mm ridge rgb(200, 131, 12);
     text-align: center;
     font-size: 50px;
-    padding: 50px 0;
+    padding: 20px 0;
 }
 
 form {
-    width: 50%;
-    margin: 0 auto;
+    width: 30%;
+    margin: 0 30%;
     height: auto;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
+    align-items:center;
+    flex-direction:column;
     padding-bottom: 100px;
     position: relative;
+    
 }
 
 label, input {
     width: 100%;
-    font-size: 20px;
-    margin: 5px 0;
+    font-size: 15px;
+    margin: 5px 0px 0px 200px;
+    border-radius: 5px;
 }
 
 form input {
@@ -578,9 +370,11 @@ input:nth-child(4){
 
 textarea {
     width: 100%;
-    height: 200px;
-    font-size: 20px;
-    padding: 15px;
+    height: 100px;
+    font-size: 10px;
+    padding: 10px;
+    margin: 0px 0px 0px 200px;
+    border-radius: 5px;
 }
 label:nth-child(5){
     margin-bottom: 10px;
@@ -588,7 +382,8 @@ label:nth-child(5){
 
 .form-btn {
     display: block;
-    margin: 20px auto;
+    margin-top: 50px;
+    margin-left: 36%;
     padding: 10px;
     font-size: 18px;
     width: 250px;
@@ -605,11 +400,130 @@ label:nth-child(5){
 footer {
     text-align: center;
     padding: 15px 0;
-    border-top: 1px dashed #000;
+    border-top: 3mm ridge rgb(200, 131, 12);
 }
-.FB{
-    width: 80px;
+
+/*------------ Qi Gong page ------------*/
+
+/*------------ En tête Qi Gong --------*/
+.logo-qi-gong{
+    float: left;
+    margin-left: 10%;
+    margin-top: 6%;
 }
-.Insta{
-    width: 60px;
+
+.head{
+    text-align: center;
+    font-size: 25px;
+    padding: 30px 80px;
+    margin: 20px 350px;
+    font-family:  Arial, Helvetica, sans-serif;
 }
+
+/*------------ Section article--------*/
+.carte-descriptif h2{
+    text-align: center;
+    height: 40px;
+}
+.carte-descriptif {
+    width: 30%;
+    height: auto;
+    margin: 0 20px 80px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    position: relative;
+    z-index: 100;
+    line-height:130%
+}
+.carte-descriptif li {
+    list-style-type: none;
+    margin: 5px;
+}
+
+
+/*------------ 2eme partie--------*/
+.suit{
+    text-align: center;
+    font-size: 25px;
+    padding: 10px 80px 50px;
+    margin: 0px 350px;
+    font-family:  Arial, Helvetica, sans-serif;
+}
+
+
+/*------------ conférences--------*/
+.conférences{
+    text-align: center;
+    font-size: 25px;
+    padding: 30px 10px;
+    margin: 0px 350px;
+    font-family:  Arial, Helvetica, sans-serif;
+    
+}
+
+.conférences li{
+    list-style-type:circle;
+}
+
+/*------------ Wing Chun--------*/
+
+/*------------En tête Wing Chun --------*/
+
+.logo-wing-chun{
+    float: left;
+    margin-left: 8%;
+    margin-top: 3%;
+}
+/*------------ Section article--------*/
+
+.carte-principes {
+    width: 500px;
+    height: auto;
+    margin: 0px 00px 80px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    position: relative;
+    z-index: 100;
+    line-height:130%
+}
+.carte-principes h2{
+    text-align: center;
+    height: 40px;
+}
+ .carte-principes li{
+    list-style-type: none;
+    margin: 5px;
+    text-align: justify;
+ }
+
+/*------------ Histoire--------*/
+
+.history{
+    text-align: center;
+    font-size: 25px;
+    padding: 30px 10px;
+    margin: 0px 350px;
+    font-family:  Arial, Helvetica, sans-serif;
+}
+
+/*------------ Soins et Accompagnement--------*/
+
+
+/*------------ Section article--------*/
+
+.carte-soins {
+    width: 25%;
+    height: auto;
+    margin: 0 20px 80px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    position: relative;
+    z-index: 100;
+    word-spacing: 10%;
+}
+.carte-soins h2{
+    text-align: center;
+    height: 40px;
+}
+ .carte-soins li{
+    list-style-type: none;
+    margin: 5px;
+    text-align: justify;
+ }
